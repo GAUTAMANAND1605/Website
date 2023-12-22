@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="flaticon/fonts/flaticon.css">
+        <link rel="stylesheet" type="text/css" href="global.css">
+      </head>
+<body>
+
+  <header>
+    <div class="header-area" style="background-color: black;">
+      <div class="logo">
+        <a href="index.html">fit<strong>ness</strong></a>
+      </div>
+      <div class="dropdown-icon" id="dropdown">
+        <div class="dropdown-icons"></div>
+        <div class="dropdown-icons"></div>
+        <div class="dropdown-icons"></div>
+      </div>
+      <div class="header-main-links">
+        <ul>
+          <li>
+            <a class="active" href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="/contact.html">Contact</a>
+          </li>
+        </ul>
+        -
+        <a id="loggedin" class="button" href="/login.html">Login Now</a>
+        <a id="loggedout" class="button" href="/login.html"><span id="user">-</span>-Logout</a>
+      </div>
+    </div>
+  </header>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="title">
+            <span>Contact Form</span>
+          </div>
+          <h2>Feel Free to contact with us!</h2>
+          <div class="form-container">
+  
+            <div class="contact-information">
+              <h3>Contact Info</h3>
+              <div class="social">
+                <div>
+                  <h4>Subscriptions</h4>
+                  <div class="info-container">
+                    <img src="images/phone.png">
+                    <div>
+                      <h5>+1 (603)535-4592</h5>
+                      <h5>+1 (603)535-4592</h5>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4>E-mail</h4>
+                  <div class="info-container">
+                    <img src="images/mail.png">
+                    <div>
+                      <h5>Contact@xgym.com</h5>
+                      <h5>www.xgym.com</h5>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4>Social media</h4>
+                  <div class="social-contact">
+                    <div class="info-container">
+                      <img src="images/facebook.png">
+                      <h5>Fitnessfreak</h5>
+                    </div>
+                    <div class="info-container">
+                      <img src="images/instagram.png">
+                      <h5>Fitnessfreak</h5>
+                    </div>
+                    <div class="info-container">
+                      <img src="images/twitter.png">
+                      <h5>Fitnessfreak</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="form">
+              <h3>Get in touch</h3>
+              <!-- --------------------------------- -->
+              <form class="contact-form" action="http://127.0.0.1:8080/contact_form" method="POST">
+                <div class="row">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+            
+                <div class="form-group">
+                  <textarea required name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                </div>  
+                <div class="form-group">
+                  <input type="submit" value="Send" class="formButton">
+                </div>
+              </form>
+
+              <!-- ------------------------------------ -->
+            </div>
+  
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <script src="index.js"></script>
+</body>
+</html>

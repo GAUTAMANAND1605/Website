@@ -1,0 +1,1264 @@
+* {
+  -webkit-tap-highlight-color: inherit;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+/* styles for body */
+body {
+  margin: 0;
+  font-family: roboto, sans-serif;
+  position: relative;
+}
+
+/* remove default styles from links and add cursor */
+a {
+  text-decoration: none;
+  font-family: 'Teko';
+  cursor: pointer;
+}
+
+/* removes default unordered list styles */
+ul {
+  list-style-type: none;
+}
+
+/* add styles to all h2 elements */
+h2 {
+  font-size: 55px;
+  display: block;
+  line-height: 120%;
+  color: #2c234d;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: teko, sans-serif;
+}
+
+/*=============================================
+=                   button                   =
+=============================================*/
+
+.button {
+  font-family: teko;
+  display: inline-block;
+  color: white;
+  background: #ff0800;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px 45px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  /* bottom: 0; */
+  left: 0;
+  background: #c20505;
+  -webkit-transition: all 0.5s cubic-bezier(.5, 1.6, .4, .7);
+  -o-transition: all 0.5s cubic-bezier(.5, 1.6, .4, .7);
+  transition: all 0.5s cubic-bezier(.5, 1.6, .4, .7);
+  z-index: -1;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+/*============  End of button  =============*/
+
+/*=============================================
+=                   TITLE                   =
+=============================================*/
+
+.title span {
+  display: block;
+  color: #e4381C;
+  font-size: 28px;
+  margin-left: 75px;
+  font-family: teko;
+}
+
+.title::before {
+  content: '';
+  height: 2px;
+  width: 60px;
+  position: absolute;
+  background-color: #f15d44;
+  top: 17px;
+}
+
+/*============  End of TITLE  =============*/
+
+/*======================================================================================================
+==============================                   HEADER                   ==============================
+======================================================================================================*/
+
+/* add position styles and background to header */
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* add new background color to header when scroll */
+header.active {
+  background-color: black;
+}
+
+/* display header links in single line */
+.header-area,
+.header-main-links,
+.header-main-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* add right and left margin on container inside header */
+.header-area {
+  margin: 0 4%;
+}
+
+/* logo style for starting letters*/
+.logo a {
+  font-size: 42px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  color: #e4381C;
+}
+
+/* logo style for ending letters */
+.logo a strong {
+  font-weight: 500;
+  color: white;
+}
+
+.dropdown-icon {
+  display: none;
+}
+
+/* header links container margin */
+.header-main-links {
+  margin-left: auto;
+}
+
+/* header link style */
+.header-main-links li a {
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  display: block;
+  font-size: 22px;
+  padding: 10px 15px;
+  margin: 0 10px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  letter-spacing: 1px;
+  border-bottom: 2px solid transparent;
+}
+
+.header-main-links li a.active {
+  border-bottom: 2px solid #e4381C;
+}
+
+.header-main-links li a:hover {
+  border-bottom: 2px solid #e4381C;
+}
+
+.header-main-links .button {
+  margin-left: 40px;
+}
+
+/*=========================================  End of HEADER  ==========================================*/
+
+/*=====================================================================================================
+=============================                 HERO SECTION                =============================
+=====================================================================================================*/
+
+/* basic styles for hero section */
+.hero-section {
+  padding: 150px 30px 100px;
+  min-height: 600px;
+  /* height: 80vh; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("images/hero.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* max width to container in hero section */
+.hero-content {
+  max-width: 665px;
+  text-align: center;
+}
+
+/* main heading stle */
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 120%;
+  color: white;
+}
+
+.hero-content h1 strong {
+  font-weight: 800;
+}
+
+/*======================================  End of HERO SECTION  =======================================*/
+
+/*=====================================================================================================
+=============================                   ABOUT US                  =============================
+=====================================================================================================*/
+
+/* padding to about us section */
+.about-us {
+  padding: 8% 0;
+}
+
+/* make two colums for content and image */
+.about-us_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* content syling */
+.about-us_left {
+  max-width: 600px;
+  margin-right: 80px;
+}
+
+.title {
+  position: relative;
+}
+
+.about-us h2 {
+  margin: 25px 0;
+}
+
+.about-us p {
+  line-height: 30px;
+}
+
+.about-us .button {
+  margin-top: 30px;
+}
+
+.about-us_right img {
+  height: 100%;
+  max-height: 600px;
+  width: auto;
+}
+
+/*=========================================  End of ABOUT US  ==========================================*/
+
+/*=======================================================================================================
+==============================                   SERVICES                  ==============================
+=======================================================================================================*/
+
+/* service section basix styling */
+.services {
+  background-image: url("images/section_bg01.png");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 150px 0 120px; 
+}
+
+/* add width to service section */
+.service-content {
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.service-content h2 {
+  margin-top: 30px;
+  color: white;
+  max-width: 600px;
+}
+
+/* make 3 columns for service */
+.service_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 2.5%;
+}
+
+/* each column styling */
+.service {
+  background-color: white;
+  max-width: 100%;
+  padding: 60px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+/* service icon */
+.service i {
+  display: block;
+  margin: 0px auto;
+  line-height: 1.5;
+}
+
+/* service icon size */
+.service [class^="flaticon-"]::before {
+  font-size: 50px;
+  font-weight: 400;
+  margin-left: auto;
+}
+
+/* hover effect on icons */
+.service:hover i {
+  color: #f15d44;
+}
+
+/* service icon svg */
+.service > svg {
+  width: 50px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+/* hover effect on service icon svg */
+.service:hover svg {
+  fill: #f15d44;
+}
+
+/* set width to service container */
+.service-details {
+  max-width: 288px;
+  margin: 10px auto 25px;
+  text-align: center;
+}
+
+.service-details h3 {
+  font-family: teko, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+.service-details p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+/* service popup button */
+.service-button {
+  background: #ff0800;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transform: scaleY(0.1);
+      -ms-transform: scaleY(0.1);
+          transform: scaleY(0.1);
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* popup button on hover */
+.service:hover .service-button {
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+/* popup button links  */
+.service-button a {
+  font-size: 20px;
+  width: 100%;
+  letter-spacing: 1px;
+  color: white;
+  font-weight: 300;
+  padding: 12px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* arrow icon inside popup button */
+.service-button svg {
+  height: 13px;
+  width: 13px;
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+/* add color to arrow icon */
+.service-button svg path {
+  fill: white;
+}
+
+/* ivisible when cursor out */
+.service-button svg,
+.service-button a {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* vivible when cursor in */
+.service:hover .service-button svg,
+.service:hover .service-button a {
+  opacity: 1;
+}
+
+/*=========================================  End of SERVICES  =========================================*/
+
+/*=======================================================================================================
+==============================                    GEAR                    ==============================
+=======================================================================================================*/
+
+/* gear section basic styling */
+.fitness-gear {
+  background-image: url("images/sibscribe_bg.png");
+  padding: 80px 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* set width to gear content */
+.fitness-gear>div {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fitness-gear h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.fitness-gear p {
+  line-height: 150%;
+}
+
+/*=========================================   End of GEAR   ==========================================*/
+
+/*=======================================================================================================
+==============================                   CONTACT                   ==============================
+=======================================================================================================*/
+
+/* contact section padding */
+.contact-section {
+  padding: 80px 30px;
+}
+
+/* background color to contact section */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.container h2 {
+  margin: 30px 0;
+  max-width: 530px;
+}
+
+/* two column section */
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+
+/* set width to contact information section */
+.contact-information {
+  max-width: 300px;
+}
+
+.form-container h3 {
+  font-size: 36px;
+  margin-bottom: 75px;
+}
+
+.contact-information h4 {
+  color: #353535;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* basic contact information */
+.info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-container h5 {
+  margin: 0;
+  font-size: 16px;
+  color: rgb(116, 116, 116);
+  font-weight: 400;
+  line-height: 220%;
+}
+
+/* contact information icon */
+.info-container img {
+  height: 20px;
+  width: 20px;
+  margin-right: 25px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+/* form width */
+.form {
+  width: 60%;
+}
+
+/* name input in single line field */
+.row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+/* set width to name fields */
+.col {
+  width: 50%;
+}
+
+/* space between fields */
+.form-group {
+  padding: 0 25px;
+  margin-bottom: 20px;
+}
+
+/* input field */
+.form-control {
+  width: 100%;
+  border: transparent !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  height: 58px !important;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent !important;
+  color: rgba(0, 0, 0, 0.9) !important;
+  border-radius: 0px;
+  box-shadow: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  font-size: 15px;
+  font-family: roboto, sans-serif;
+}
+
+/* border color when clicked */
+.form-control:active,
+.form-control:focus {
+  border-color: #e4381C !important;
+}
+
+/* message box heght */
+.contact-form textarea.form-control {
+  height: inherit !important;
+}
+
+.formButton {
+  font-family: teko;
+  display: inline-block;
+  color: white;
+  background: #ff0800;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px 45px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: transparent;
+  margin-top: 50px;
+}
+
+/*=========================================  End of CONTACT  ==========================================*/
+
+/*=======================================================================================================
+==============================                   FOOTER                   ==============================
+=======================================================================================================*/
+
+/* basic footer style */
+footer {
+  background-color: black;
+  padding: 80px 0 20px;
+}
+
+/* set width to content */
+.footer-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/* about us width */
+.about {
+  max-width: 420px;
+}
+
+/* display flex to all footer sub container */
+.about,
+.links,
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 40px;
+}
+
+/* apply spacing between sub containers */
+.about,
+.links {
+  margin-right: 90px;
+}
+
+.footer-content h3 {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 24px 0;
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: white;
+  opacity: 0.5;
+  line-height: 24px;
+}
+
+.footer-content ul {
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content li {
+  margin: 10px 0;
+}
+
+/* links style inside footer */
+.footer-content li a {
+  font-size: 16px;
+  color: white;
+  opacity: 0.5;
+  line-height: 24px;
+  font-family: roboto, sans-serif;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* hover styles on links */
+.footer-content li a:hover {
+  color: white;
+  opacity: 1;
+}
+
+.contact-info p {
+  margin-top: 0;
+}
+
+/* social media icons */
+.contact-info svg {
+  margin: 15px 15px 0;
+}
+
+/* color of social media icons */
+.contact-info svg path {
+  fill: white;
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* hover effect on socil media icons */
+.contact-info a:hover svg path {
+  opacity: 1;
+}
+
+
+/*=========================================  End of FOOTER  ==========================================*/
+
+/*=====================================================================================================
+=============================                 MEDIA QUERY                 =============================
+=====================================================================================================*/
+
+@media(max-width: 1200px) {
+
+  h2 {
+    font-size: 50px;
+  }
+
+  /*=============================================
+  =                   header                   =
+  =============================================*/
+  
+  .header-area {
+    margin: 0 25px;
+  }
+  
+  /*============  End of header  =============*/
+
+  /*=============================================
+  =                 hero section                =
+  =============================================*/
+  
+  .hero-section {
+    padding: 8% 30px;
+  }
+  
+  /*==========  End of hero section  ==========*/
+
+  /*=============================================
+  =                   about                   =
+  =============================================*/
+  
+  .about-us_left {
+    margin-right: 50px;
+  }
+  
+  /*============  End of about  =============*/
+
+}
+
+@media(max-width: 1024px) {
+
+  h2 {
+    font-size: 46px;
+  }
+
+  /*=============================================
+  =                   header                   =
+  =============================================*/
+  
+  .header-area {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  /* dropdown styles */
+  .dropdown-icon {
+    display: block;
+    margin: 20px 0;
+    cursor: pointer;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    z-index: 500;
+  }
+
+  .dropdown-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40px;
+    height: 4px;
+    margin: 10px;
+    background-color: #DCDCDC;
+    -webkit-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+
+  .dropdown-icons:nth-child(2) {
+    width: 25px;
+  }
+
+  .open .dropdown-icons:nth-child(1)
+  {
+      -webkit-transform: rotate(45deg) translate(11px, 9px);
+          -ms-transform: rotate(45deg) translate(11px, 9px);
+              transform: rotate(45deg) translate(11px, 9px);
+  }
+
+  .open .dropdown-icons:nth-child(2)
+  {
+      -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+              transform: scale(0);
+  }
+
+  .open .dropdown-icons:nth-child(3)
+  {
+      -webkit-transform: rotate(-45deg) translate(10px, -9px);
+          -ms-transform: rotate(-45deg) translate(10px, -9px);
+              transform: rotate(-45deg) translate(10px, -9px);
+  }
+
+  .header-main-links {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 100;
+    -webkit-transform: translateX(120%);
+        -ms-transform: translateX(120%);
+            transform: translateX(120%);
+    -webkit-transition: 0.6s ease-in-out;
+    -o-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+    -webkit-transition-delay: 0s;
+         -o-transition-delay: 0s;
+            transition-delay: 0s;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+  }
+
+  .header-main-links.open {
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+
+  .header-main-links ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+
+  .header-main-links li a {
+    color: black;
+    margin: 10px 0;
+  }
+
+  .header-main-links .button {
+    margin-left: 0;
+  }
+  
+  /*============  End of header  =============*/
+
+  /*=============================================
+  =                   about                   =
+  =============================================*/
+  
+  .about-us_flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .about-us_left {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+
+  .about-us_right {
+    width: 100%;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .about-us_right img {
+    max-height: 650px;
+  }
+  
+  /*============  End of about  =============*/
+
+  /*=============================================
+  =                   service                   =
+  =============================================*/
+  
+  .services {
+    padding: 10% 0;
+  }
+
+  .service_grid {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 5%;
+    grid-column-gap: 4%;
+    margin-bottom: 5%;
+  }
+  
+  /*============  End of service  =============*/
+
+  /*=============================================
+  =                   contact                   =
+  =============================================*/
+  
+  .contact-section {
+    padding: 7% 30px;
+  }
+
+  .form-container {
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+
+  .contact-information {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-container h3 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .social > div {
+    margin: 2% 5%;
+  }
+
+  .contact-information h4 {
+    font-size: 22px;
+  }
+
+  .form {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  /*============  End of contact  =============*/
+
+}
+
+@media(max-width: 768px) {
+  
+  h2 {
+    font-size: 42px;
+  }
+
+  /*=============================================
+  =                   header                   =
+  =============================================*/
+  
+  .header-main-links {
+    width: 60%;
+  }
+  
+  /*============  End of header  =============*/
+
+  /*=============================================
+  =                   service                   =
+  =============================================*/
+  
+  .service_grid {
+    grid-row-gap: 3%;
+    grid-column-gap: 2%;
+    margin-bottom: 3%;
+  }
+
+  .fitness-gear h2 {
+    font-size: 40px;
+  }
+  
+  /*============  End of service  =============*/
+
+  /*=============================================
+  =                   contact                   =
+  =============================================*/
+  
+  .container {
+    padding: 20px 0px;
+  }
+  
+  /*============  End of contact  =============*/
+
+}
+
+@media(max-width: 600px) { 
+
+  h2 {
+    font-size: 38px;
+  }
+
+  .title span {
+    font-size: 24px;
+    margin-left: 62px;
+  }
+
+  .title::before {
+    width: 45px;
+    top: 15px;
+  }
+
+  /*=============================================
+  =                 hero section                =
+  =============================================*/
+
+  .hero-content h1 {
+    font-size: 55px;
+  }
+  
+  /*==========  End of hero section  ==========*/
+
+  /*=============================================
+  =                   about                   =
+  =============================================*/
+  
+  .about-us {
+    padding: 10% 0;
+  }
+  
+  /*============  End of about  =============*/
+
+  /*=============================================
+  =                   service                   =
+  =============================================*/
+  
+  .services {
+    padding: 12% 0;
+  }
+
+  .service_grid {
+    grid-template-columns: 1fr;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    margin-bottom: 0;
+  }
+
+  .service {
+    margin-bottom: 6%;
+    padding: 50px 40px;
+  }
+  
+  /*============  End of service  =============*/
+
+  /*=============================================
+  =                   footer                   =
+  =============================================*/
+  
+  footer {
+    padding-top: 60px;
+  }
+
+  .about {
+    margin-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /*============  End of footer  =============*/
+
+}
+
+@media(max-width: 480px) {
+
+  h2 {
+    font-size: 32px;
+  }
+
+  /*=============================================
+  =                 hero section                =
+  =============================================*/
+  
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .header-main-links {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /*==========  End of hero section  ==========*/
+
+  /*=============================================
+  =                   about                   =
+  =============================================*/
+  
+  .about-us {
+    padding: 55px 0;
+  }
+
+  .about-us_flex {
+    padding: 0 25px;
+  }
+
+  .about-us_right img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  
+  /*============  End of about  =============*/
+
+  /*=============================================
+  =                   service                   =
+  =============================================*/
+  
+  .services {
+    padding: 60px 0;
+  }
+
+  .service-content {
+    padding: 0 25px;
+  }
+  
+  /*============  End of service  =============*/
+
+  /*=============================================
+  =                   gear                   =
+  =============================================*/
+  
+  .fitness-gear {
+    padding: 65px 25px;
+  }
+
+  .fitness-gear h2 {
+    font-size: 35px;
+  }
+  
+  /*============  End of gear  =============*/
+
+  /*=============================================
+  =                   contact                   =
+  =============================================*/
+  
+  .contact-section {
+    padding: 40px 25px;
+  }
+
+  .container h2 {
+    margin: 25px 0;
+  }
+
+  .form-container h3 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .form-group .button {
+    margin-top: 40px;
+  }
+
+  .form {
+    margin-bottom: 30px;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .form-group {
+    padding: 0;
+  }
+
+  .contact-information h4 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  /*============  End of contact  =============*/
+
+}
+
+/*======================================  End of MEDIA QUERY  =======================================*/
